@@ -7,22 +7,12 @@ redirect_from:
   - /about.html
 ---
 
+<div class="lang-content" data-lang="en">
 I am an incoming M.S. student in **Electronic Information** at [Beihang University (BUAA)](https://www.buaa.edu.cn/) (Sept 2026, direct admission). I received my B.E. in **Measurement & Control Technology and Instrumentation** from [Wuhan University of Technology (WHUT)](https://www.whut.edu.cn/) in 2026.
 
 My interests lie at the intersection of **autonomous robotics**, **embedded systems**, and **intelligent perception** — building things that move, sense, and decide in the real world.
 
 I have interned at [Momenta](https://www.momenta.ai/) (autonomous driving, system integration) and [Zhejiang University Huzhou Research Institute](https://hz.zju.edu.cn/) (robot navigation in GNSS-denied environments). I enjoy turning research ideas into working hardware and software.
-
----
-
-## News
-
-- **2026.03** — Completed internship at Momenta (Dongfeng Nissan N7 intelligent driving OTA integration).
-- **2025.05** — Paper accepted at ICMIII 2025 (EI indexed): *Design of Venlo-type Greenhouse Roof Cleaning Robot*.
-- **2025.04** — Invention patent filed: *A Roof Cleaning Robot* (Application No. 202510500482.5).
-- **2025.05** — National Innovation Project concluded with **National Excellent** rating and selected for the 18th National College Student Innovation Conference (2025).
-- **2024.11** — **National 1st Prize**, China College Student Mechanical Engineering Innovation Competition.
-- **2024.11** — **National 3rd Prize**, China Robot Competition & Robocup China Open.
 
 ---
 
@@ -89,3 +79,97 @@ B.E. in Measurement & Control Technology and Instrumentation &nbsp;·&nbsp; *Sep
 ---
 
 *Feel free to reach out at [339300@whut.edu.cn](mailto:339300@whut.edu.cn)*
+</div>
+
+<div class="lang-content" data-lang="zh" style="display: none;">
+我是**北京航空航天大学**（BUAA）电子信息专业2026年9月入学的硕士研究生（直接推免）。我于2026年从**武汉理工大学**获得**测控技术与仪器**专业学士学位。
+
+我的研究兴趣集中在**自主机器人**、**嵌入式系统**和**智能感知**的交叉领域——致力于研发能够在现实世界中移动、感知和决策的系统。
+
+我曾在**[ Momenta ](https://www.momenta.ai/)**（自动驾驶、系统集成）和**浙江大学湖州研究院**（GNSS拒止环境下的机器人导航）实习。我热衷于将研究想法转化为实际可用的硬件和软件。
+
+---
+
+## 教育背景
+
+**北京航空航天大学**
+电子信息硕士研究生 &nbsp;·&nbsp; *2026年9月 – 2029年7月（预计）*
+直接推免
+
+**武汉理工大学**
+测控技术与仪器专业学士 &nbsp;·&nbsp; *2022年9月 – 2026年7月*
+
+---
+
+## 工作经历
+
+**[Momenta](https://www.momenta.ai/)** — 系统集成架构实习生
+*2025年11月 – 2026年3月 · 北京 / 远程*
+- 负责东风日产N7车型智能驾驶软件的OTA3集成、发布与交付。
+- 参与日产N6/N7/N8平台（QC8778、Orin-N、Orin-Y）的CPU/内存资源优化。
+- 构建自动化流水线（首车闭环、自动编译部署、路试数据分析），并使用Claude Code开发飞书机器人。
+
+**[浙江大学湖州研究院](https://hz.zju.edu.cn/)** — 机器人导航算法实习生
+*2025年6月 – 2025年8月 · 湖州*
+- 研究GNSS拒止环境下小型载具的自主导航与控制。
+- 设计基于RRP纯追踪算法的阿克曼底盘局部规划器，解决了曲率跳变偏差问题。
+- 协助组装六台机器人样机；编写中间件并分析传感器反馈数据。
+
+---
+
+## 代表性项目
+
+**仿生章鱼文洛型温室屋顶清洁机器人** *(国家大学生创新项目，2024–2025)*
+- 带领团队设计并制作了一款能够自主穿越、换垄及避障的爬壁机器人，适用于20°–35°文洛型温室屋顶。
+- 研发了负压吸附模型、运动学仿真、STM32三种运动模式及地平线RDK X5感知导航系统。
+- 成果：1篇EI论文、1项发明专利、国家优秀项目。
+
+**AGV码垛机器人** *(中国机器人竞赛，2024年，国家三等奖)*
+- 设计了基于视觉自主决策（OpenCV）、路径规划及工件搬运的立体仓库AGV。
+- 开发了融合陀螺仪、光电和超声波传感器的轮式里程计闭环定位系统。
+
+**软岩钻孔铺管机器人** *(全国大学生机械创新设计大赛，2024年，国家一等奖)*
+- 设计了三段式行星齿轮扭矩调节器、弹簧冲击结构、球簧扭矩限制器及螺旋连杆径向扩张机构。
+- 在Inventor/Fusion360/Blender中完成全机械建模、应力仿真、运动约束分析及动画渲染和生成式设计优化。
+
+---
+
+## 论文与专利
+
+1. **刘晓yu**，\"Design of Venlo-type Greenhouse Roof Cleaning Robot,\" *ICMIII 2025* (EI indexed). [2025年5月]
+2. 张金光、**刘晓yu** 等。 *一种屋顶清洁机器人。* 发明专利，申请号：202510500482.5。 [2025年4月]
+
+---
+
+## 技能
+
+- **机器人**：ROS (C++)、机器人建图/定位/导航（SLAM）、运动学仿真
+- **软件**：Python、Shell、Linux、Git、Qt/C++
+- **嵌入式**：STM32、C51、硬件在环控制系统
+- **机械**：Inventor、Fusion360、Blender（建模、仿真、动画）
+- **视觉**：OpenCV
+- **摄影**：作品发表于《中国日报》(2023)
+
+---
+
+*欢迎联系我：[339300@whut.edu.cn](mailto:339300@whut.edu.cn)*
+</div>
+
+<script>
+// Wait for language system to be ready, then apply language
+document.addEventListener('DOMContentLoaded', function() {
+  // Small delay to ensure the language system is initialized
+  setTimeout(applyLanguageToContent, 100);
+});
+
+function applyLanguageToContent() {
+  const savedLang = localStorage.getItem("lang") || "en";
+  const contents = document.querySelectorAll('.lang-content');
+  contents.forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === savedLang ? 'block' : 'none';
+  });
+}
+
+// Make this function available globally for language toggle
+window.applyLanguageToContent = applyLanguageToContent;
+</script>

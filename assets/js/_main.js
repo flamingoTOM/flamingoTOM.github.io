@@ -102,6 +102,53 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
+  // Language toggle
+  var toggleLanguage = () => {
+    const currentLang = localStorage.getItem("lang") || "en";
+    const newLang = currentLang === "en" ? "zh" : "en";
+    localStorage.setItem("lang", newLang);
+    updatePageLanguage(newLang);
+  };
+
+  var updatePageLanguage = (lang) => {
+    const link = document.getElementById("lang-toggle-link");
+    if (link) {
+      link.textContent = lang === "en" ? "EN" : "中";
+    }
+    // Toggle language-specific content
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    // Toggle about page language content
+    document.querySelectorAll(".lang-content").forEach(el => {
+      el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+    });
+    document.documentElement.lang = lang;
+  };
+
+  var translations = {
+    en: {
+      "photograph-title": "Photograph",
+      "photograph-desc": "A collection of moments captured through my lens."
+    },
+    zh: {
+      "photograph-title": "摄影",
+      "photograph-desc": "镜头下的瞬间，记录生活的美好。"
+    }
+  };
+
+  // Init language
+  var initLanguage = () => {
+    const savedLang = localStorage.getItem("lang") || "en";
+    updatePageLanguage(savedLang);
+  };
+
+  initLanguage();
+  $('#lang-toggle').on('click', toggleLanguage);
+
   // Enable the sticky footer
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");
