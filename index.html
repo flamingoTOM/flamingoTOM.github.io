@@ -87,7 +87,7 @@
              onerror="this.style.display='none'" />
         <div class="edu-content">
           <div class="school">
-            <a href="https://www.buaa.edu.cn/" target="_blank">Beihang University (BUAA, 北京航空航天大学)</a>
+            <a href="https://www.buaa.edu.cn/" target="_blank">Beihang University (BUAA)</a>
           </div>
           <div class="dept">School of Instrumentation and Optoelectronic Engineering</div>
           <div class="degree">M.Eng. in Electronic Information </div>
@@ -99,10 +99,10 @@
              onerror="this.style.display='none'" />
         <div class="edu-content">
           <div class="school">
-            <a href="https://www.whut.edu.cn/" target="_blank">Wuhan University of Technology (WHUT, 武汉理工大学)</a>
+            <a href="https://www.whut.edu.cn/" target="_blank">Wuhan University of Technology (WHUT)</a>
           </div>
           <div class="dept">School of Mechanical and Electronic Engineering</div>
-          <div class="degree">B.Eng. in Measurement and Control Technology and Instruments (测控技术与仪器)</div>
+          <div class="degree">B.Eng. in Measurement and Control Technology and Instruments</div>
         </div>
       </li>
     </ul>
@@ -136,7 +136,7 @@
              onerror="this.style.display='none'" />
         <div class="edu-content">
           <div class="school">
-            <a href="http://hzi.zju.edu.cn/site/main" target="_blank">Huzhou Institute of Zhejiang University (浙江大学湖州研究院)</a>
+            <a href="http://hzi.zju.edu.cn/site/main" target="_blank">Huzhou Institute of Zhejiang University</a>
           </div>
           <div class="dept">Robot Navigation Algorithm Intern (机器人导航算法实习生)</div>
           <div class="degree">
@@ -246,6 +246,26 @@
           <div class="proj-desc">
             设计三级行星齿轮传动的扭矩调节机构、弹簧-对齿冲击结构、滚珠-弹簧扭矩限制机构、丝杆-连杆径向膨胀机构。
             基于 Inventor、Blender、Fusion 360 完成机构建模、应力仿真、运动学绑定与仿真、动画渲染、衍生式优化设计。
+          </div>
+        </div>
+      </li>
+
+      <li class="oss-item">
+        <div class="oss-thumb">
+          <img src="assets/files/work/ZJU_Intern.png" alt="RPP-CustNav"
+               onerror="this.outerHTML='<div style=width:160px;height:90px;background:var(--tag-bg);border-radius:5px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-light);padding:8px;text-align:center>RPP-CustNav</div>'" />
+        </div>
+        <div class="oss-body">
+          <div class="proj-name">
+            <a href="https://github.com/flamingoTOM/RPP-CustNav-RPP-based-Customized-Navigation-Framework" target="_blank">GNSS 拒止环境下小型运载车辆的自主导航系统</a>
+          </div>
+          <div class="proj-meta">浙江大学湖州研究院实习项目 · 2025.7 – 2025.8</div>
+          <div class="proj-desc">
+            基于 ROS Noetic 的完整自主导航系统，面向 GNSS 信号缺失的工厂场景。<br/>
+            • <strong>建图</strong>：前后双 mid360 激光雷达 + IMU，采用 FAST-LIO-SAM 算法预先构建全局地图<br/>
+            • <strong>定位</strong>：激光雷达 + RTK天线 + 里程计融合，基于 HDL-Localization 与全局地图匹配，10 Hz 持续输出<br/>
+            • <strong>导航</strong>：move_base 框架；A* 全局规划；定制 RPP 纯跟踪局部规划器，遇动态障碍物减速/停车等待，始终保持全局路径跟踪；6 路前后声纳提供紧急制动保障<br/>
+            • 设计 nav_server 节点，支持 XML 格式离散航点发布与导航状态回调
           </div>
         </div>
       </li>
