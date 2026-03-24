@@ -104,8 +104,8 @@ $(document).ready(function () {
 
   // Language toggle
   var toggleLanguage = () => {
-    const currentLang = localStorage.getItem("lang") || "en";
-    const newLang = currentLang === "en" ? "zh" : "en";
+    const currentLang = localStorage.getItem("lang") || "zh";
+    const newLang = currentLang === "zh" ? "en" : "zh";
     localStorage.setItem("lang", newLang);
     updatePageLanguage(newLang);
   };
@@ -152,7 +152,7 @@ $(document).ready(function () {
 
   // Init language
   var initLanguage = () => {
-    const savedLang = localStorage.getItem("lang") || "en";
+    const savedLang = localStorage.getItem("lang") || "zh";
     updatePageLanguage(savedLang);
   };
 
