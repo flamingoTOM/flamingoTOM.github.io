@@ -9,7 +9,7 @@ redirect_from:
 
 <style>
 .home-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -28,101 +28,94 @@ redirect_from:
 
 /* Section styling */
 .section {
-  margin-bottom: 60px;
+  margin: 40px 0;
 }
 
 .section-title {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
   margin-bottom: 30px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #333;
+  color: #111;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  padding-left: 30px;
+/* Education & Internship - Three column layout */
+.edu-list, .exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #ddd;
+.edu-item, .exp-item {
+  display: grid;
+  grid-template-columns: 140px 240px 1fr;
+  align-items: center;
+  column-gap: 28px;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 35px;
+.exp-item {
+  grid-template-columns: 140px 200px 1fr;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -35px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid #333;
+.edu-time, .exp-time {
+  color: #8a8f98;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre-line;
 }
 
-.timeline-header {
+.edu-time span, .exp-time span {
+  display: block;
+}
+
+.edu-logo, .exp-logo {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  gap: 15px;
+  justify-content: center;
 }
 
-.timeline-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
+.edu-logo img, .exp-logo img {
+  max-width: 220px;
+  max-height: 80px;
   object-fit: contain;
-  background: #f9f9f9;
-  padding: 5px;
 }
 
-.timeline-info {
-  flex: 1;
+.exp-logo img {
+  max-width: 180px;
+  max-height: 70px;
 }
 
-.timeline-title {
-  font-size: 1.1em;
-  font-weight: bold;
+.edu-content h3, .exp-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f57ff;
+  font-family: "Georgia", serif;
+}
+
+.exp-content h3 {
+  color: #333;
+}
+
+.edu-subtitle, .exp-subtitle {
   margin: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+  font-family: "Georgia", serif;
 }
 
-.timeline-subtitle {
-  font-size: 0.95em;
-  color: #666;
-  margin: 5px 0 0 0;
-}
-
-.timeline-time {
-  font-size: 0.85em;
-  color: #888;
-  white-space: nowrap;
-}
-
-.timeline-content {
-  font-size: 0.95em;
+.exp-content ul {
+  margin: 15px 0 0 0;
+  padding-left: 18px;
+  font-size: 15px;
   line-height: 1.7;
-  margin-left: 65px;
+  color: #555;
 }
 
-.timeline-content ul {
-  margin: 10px 0;
-  padding-left: 20px;
-}
-
-.timeline-content li {
-  margin-bottom: 5px;
+.exp-content li {
+  margin-bottom: 8px;
 }
 
 /* Project cards */
@@ -198,23 +191,13 @@ redirect_from:
   font-size: 0.95em;
 }
 
-/* Open source */
-.open-source-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-.open-source-item h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.1em;
-}
-
-.open-source-item .source-desc {
-  font-size: 0.95em;
-  color: #666;
-  line-height: 1.6;
+/* Chinese font */
+:lang(zh) .edu-content h3,
+:lang(zh) .edu-subtitle,
+:lang(zh) .exp-content h3,
+:lang(zh) .exp-subtitle,
+:lang(zh) .section-title {
+  font-family: "微软雅黑", "Microsoft YaHei", "黑体", serif;
 }
 </style>
 
@@ -227,25 +210,33 @@ redirect_from:
 
   <div class="section">
     <h2 class="section-title">Education</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Beihang_University_logo.svg" alt="Beihang" class="timeline-logo" onerror="this.src='https://www.buaa.edu.cn/images/buaa_logo.png'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">Beihang University (北京航空航天大学)</h3>
-            <p class="timeline-subtitle">M.S. in Electronic Information · Direct admission </p>
-          </div>
-          <span class="timeline-time">2026 – 2029</span>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-time">
+          <span>2026</span>
+          <span>–</span>
+          <span>2029</span>
+        </div>
+        <div class="edu-logo">
+          <img src="/images/lxy/school/buaa.png" alt="Beihang University">
+        </div>
+        <div class="edu-content">
+          <h3>Beihang University (北京航空航天大学)</h3>
+          <p class="edu-subtitle">M.S. in Electronic Information · Direct admission</p>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://www.whut.edu.cn/images/logo.png" alt="WHUT" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/8c/Wuhan_University_of_Technology_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">Wuhan University of Technology (武汉理工大学)</h3>
-            <p class="timeline-subtitle">B.E. in Measurement & Control Technology and Instrumentation</p>
-          </div>
-          <span class="timeline-time">2022 – 2026</span>
+      <div class="edu-item">
+        <div class="edu-time">
+          <span>2022</span>
+          <span>–</span>
+          <span>2026</span>
+        </div>
+        <div class="edu-logo">
+          <img src="/images/lxy/school/wut.png" alt="Wuhan University of Technology">
+        </div>
+        <div class="edu-content">
+          <h3>Wuhan University of Technology (武汉理工大学)</h3>
+          <p class="edu-subtitle">B.E. in Measurement & Control Technology and Instrumentation</p>
         </div>
       </div>
     </div>
@@ -253,17 +244,19 @@ redirect_from:
 
   <div class="section">
     <h2 class="section-title">Internship</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://www.momenta.ai/static/logo.svg" alt="Momenta" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/8c/Wuhan_University_of_Technology_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">Momenta</h3>
-            <p class="timeline-subtitle">System Integration Architecture Intern · Beijing / Remote</p>
-          </div>
-          <span class="timeline-time">2025.11 – 2026.03</span>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-time">
+          <span>Nov 2025</span>
+          <span>–</span>
+          <span>Mar 2026</span>
         </div>
-        <div class="timeline-content">
+        <div class="exp-logo">
+          <img src="/images/lxy/school/momenta.png" alt="Momenta">
+        </div>
+        <div class="exp-content">
+          <h3>Momenta</h3>
+          <p class="exp-subtitle">System Integration Architecture Intern · Beijing / Remote</p>
           <ul>
             <li>Responsible for OTA3 integration, release, and delivery for Dongfeng Nissan N7 intelligent driving software.</li>
             <li>Contributed to CPU/memory optimization across Nissan N6/N7/N8 platforms (QC8778, Orin-N, Orin-Y).</li>
@@ -271,16 +264,18 @@ redirect_from:
           </ul>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://hz.zju.edu.cn/images/logo.png" alt="ZJU" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/4/47/Zhejiang_University_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">Zhejiang University Huzhou Research Institute</h3>
-            <p class="timeline-subtitle">Robot Navigation Algorithm Intern · Huzhou</p>
-          </div>
-          <span class="timeline-time">2025.06 – 2025.08</span>
+      <div class="exp-item">
+        <div class="exp-time">
+          <span>Jun 2025</span>
+          <span>–</span>
+          <span>Aug 2025</span>
         </div>
-        <div class="timeline-content">
+        <div class="exp-logo">
+          <img src="/images/lxy/school/zju.png" alt="ZJU Huzhou">
+        </div>
+        <div class="exp-content">
+          <h3>Zhejiang University Huzhou Research Institute</h3>
+          <p class="exp-subtitle">Robot Navigation Algorithm Intern · Huzhou</p>
           <ul>
             <li>Researched autonomous navigation for small carrier vehicles in GNSS-denied environments.</li>
             <li>Designed an Ackermann-chassis local planner based on RRP pure-pursuit algorithm.</li>
@@ -358,25 +353,33 @@ redirect_from:
 
   <div class="section">
     <h2 class="section-title">教育背景</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Beihang_University_logo.svg" alt="Beihang" class="timeline-logo" onerror="this.src='https://www.buaa.edu.cn/images/buaa_logo.png'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">北京航空航天大学</h3>
-            <p class="timeline-subtitle">电子信息硕士研究生 · 直接推免</p>
-          </div>
-          <span class="timeline-time">2026 – 2029</span>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-time">
+          <span>2026</span>
+          <span>–</span>
+          <span>2029</span>
+        </div>
+        <div class="edu-logo">
+          <img src="/images/lxy/school/buaa.png" alt="北京航空航天大学">
+        </div>
+        <div class="edu-content">
+          <h3>北京航空航天大学</h3>
+          <p class="edu-subtitle">电子信息硕士研究生 · 直接推免</p>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://www.whut.edu.cn/images/logo.png" alt="WHUT" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/8c/Wuhan_University_of_Technology_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">武汉理工大学</h3>
-            <p class="timeline-subtitle">测控技术与仪器专业学士</p>
-          </div>
-          <span class="timeline-time">2022 – 2026</span>
+      <div class="edu-item">
+        <div class="edu-time">
+          <span>2022</span>
+          <span>–</span>
+          <span>2026</span>
+        </div>
+        <div class="edu-logo">
+          <img src="/images/lxy/school/wut.png" alt="武汉理工大学">
+        </div>
+        <div class="edu-content">
+          <h3>武汉理工大学</h3>
+          <p class="edu-subtitle">测控技术与仪器专业学士</p>
         </div>
       </div>
     </div>
@@ -384,17 +387,19 @@ redirect_from:
 
   <div class="section">
     <h2 class="section-title">实习经历</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://www.momenta.ai/static/logo.svg" alt="Momenta" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/8c/Wuhan_University_of_Technology_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">Momenta (魔门塔)</h3>
-            <p class="timeline-subtitle">系统集成架构实习生 · 北京 / 远程</p>
-          </div>
-          <span class="timeline-time">2025.11 – 2026.03</span>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-time">
+          <span>2025年11月</span>
+          <span>–</span>
+          <span>2026年3月</span>
         </div>
-        <div class="timeline-content">
+        <div class="exp-logo">
+          <img src="/images/lxy/school/momenta.png" alt="Momenta">
+        </div>
+        <div class="exp-content">
+          <h3>Momenta (魔门塔)</h3>
+          <p class="exp-subtitle">系统集成架构实习生 · 北京 / 远程</p>
           <ul>
             <li>负责东风日产N7智能驾驶软件的OTA3集成、发布与交付。</li>
             <li>参与日产N6/N7/N8平台CPU/内存资源优化。</li>
@@ -402,16 +407,18 @@ redirect_from:
           </ul>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <img src="https://hz.zju.edu.cn/images/logo.png" alt="ZJU" class="timeline-logo" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/4/47/Zhejiang_University_logo.jpg'">
-          <div class="timeline-info">
-            <h3 class="timeline-title">浙江大学湖州研究院</h3>
-            <p class="timeline-subtitle">机器人导航算法实习生 · 湖州</p>
-          </div>
-          <span class="timeline-time">2025.06 – 2025.08</span>
+      <div class="exp-item">
+        <div class="exp-time">
+          <span>2025年6月</span>
+          <span>–</span>
+          <span>2025年8月</span>
         </div>
-        <div class="timeline-content">
+        <div class="exp-logo">
+          <img src="/images/lxy/school/zju.png" alt="浙江大学">
+        </div>
+        <div class="exp-content">
+          <h3>浙江大学湖州研究院</h3>
+          <p class="exp-subtitle">机器人导航算法实习生 · 湖州</p>
           <ul>
             <li>研究GNSS拒止环境下小型载具的自主导航与控制。</li>
             <li>设计基于RRP纯追踪算法的阿克曼底盘局部规划器。</li>
@@ -442,7 +449,7 @@ redirect_from:
         <div class="project-desc">
           <ul>
             <li>设计基于视觉自主决策的立体仓库AGV。</li>
-            <li>开发融合陀螺仪、光电和超声波传感器的轮式里程计闭环定位系统。</li>
+            <li>开发融合陀螺仪，光电和超声波传感器的轮式里程计闭环定位系统。</li>
           </ul>
         </div>
       </div>
