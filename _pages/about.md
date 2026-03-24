@@ -233,7 +233,7 @@ redirect_from:
           <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Beihang_University_logo.svg" alt="Beihang" class="timeline-logo" onerror="this.src='https://www.buaa.edu.cn/images/buaa_logo.png'">
           <div class="timeline-info">
             <h3 class="timeline-title">Beihang University (北京航空航天大学)</h3>
-            <p class="timeline-subtitle">M.S. in Electronic Information · Direct admission (推免)</p>
+            <p class="timeline-subtitle">M.S. in Electronic Information · Direct admission </p>
           </div>
           <span class="timeline-time">2026 – 2029</span>
         </div>
