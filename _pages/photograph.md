@@ -114,7 +114,43 @@ author_profile: false
   <h1 class="entry-title" data-i18n="photograph-title">Photograph</h1>
   <p class="photograph-intro" data-i18n="photograph-desc">A collection of moments captured through my lens.</p>
 
-  <div id="photo-grid"></div>
+  <div class="photograph-year">
+    <h2>2023</h2>
+    <div class="photograph-grid">
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (13).jpg" alt="Photo" onclick="openLightbox(0)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (15).jpg" alt="Photo" onclick="openLightbox(1)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (26).jpg" alt="Photo" onclick="openLightbox(2)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (28).jpg" alt="Photo" onclick="openLightbox(3)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (34).jpg" alt="Photo" onclick="openLightbox(4)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (2).jpg" alt="Photo" onclick="openLightbox(5)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (3).jpg" alt="Photo" onclick="openLightbox(6)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (5).jpg" alt="Photo" onclick="openLightbox(7)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (18).jpg" alt="Photo" onclick="openLightbox(8)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/20231021-_DSC1304.jpg" alt="Photo" onclick="openLightbox(9)"></div>
+    </div>
+  </div>
+
+  <div class="photograph-year">
+    <h2>2022</h2>
+    <div class="photograph-grid">
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (35).jpg" alt="Photo" onclick="openLightbox(10)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (1).jpg" alt="Photo" onclick="openLightbox(11)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (7).jpg" alt="Photo" onclick="openLightbox(12)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (16).jpg" alt="Photo" onclick="openLightbox(13)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/3 (5).jpg" alt="Photo" onclick="openLightbox(14)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/InterPhoto_1651233974871.jpg" alt="Photo" onclick="openLightbox(15)"></div>
+    </div>
+  </div>
+
+  <div class="photograph-year">
+    <h2>2021</h2>
+    <div class="photograph-grid">
+      <div class="photograph-item"><img src="/images/lxy/photograph/1 (37).jpg" alt="Photo" onclick="openLightbox(16)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/2 (9).jpg" alt="Photo" onclick="openLightbox(17)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/3 (6).jpg" alt="Photo" onclick="openLightbox(18)"></div>
+      <div class="photograph-item"><img src="/images/lxy/photograph/有迹可循.jpg" alt="Photo" onclick="openLightbox(19)"></div>
+    </div>
+  </div>
 </div>
 
 <div class="lightbox" id="lightbox">
@@ -126,74 +162,35 @@ author_profile: false
 
 <script>
 var photos = [
-  { src: "/images/lxy/photograph/1 (37).jpg", year: 2021 },
-  { src: "/images/lxy/photograph/2 (9).jpg", year: 2021 },
-  { src: "/images/lxy/photograph/3 (6).jpg", year: 2021 },
-  { src: "/images/lxy/photograph/有迹可循.jpg", year: 2021 },
-  { src: "/images/lxy/photograph/2 (7).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/InterPhoto_1651233974871.jpg", year: 2022 },
-  { src: "/images/lxy/photograph/2 (1).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/1 (35).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/2 (16).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/3 (5).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/1 (28).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/1 (13).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/1 (15).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/2 (2).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/2 (3).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/2 (5).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/1 (26).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/2 (18).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/1 (34).jpg", year: 2023 },
-  { src: "/images/lxy/photograph/20231021-_DSC1304.jpg", year: 2023 }
+  "/images/lxy/photograph/1 (13).jpg",
+  "/images/lxy/photograph/1 (15).jpg",
+  "/images/lxy/photograph/1 (26).jpg",
+  "/images/lxy/photograph/1 (28).jpg",
+  "/images/lxy/photograph/1 (34).jpg",
+  "/images/lxy/photograph/2 (2).jpg",
+  "/images/lxy/photograph/2 (3).jpg",
+  "/images/lxy/photograph/2 (5).jpg",
+  "/images/lxy/photograph/2 (18).jpg",
+  "/images/lxy/photograph/20231021-_DSC1304.jpg",
+  "/images/lxy/photograph/1 (35).jpg",
+  "/images/lxy/photograph/2 (1).jpg",
+  "/images/lxy/photograph/2 (7).jpg",
+  "/images/lxy/photograph/2 (16).jpg",
+  "/images/lxy/photograph/3 (5).jpg",
+  "/images/lxy/photograph/InterPhoto_1651233974871.jpg",
+  "/images/lxy/photograph/1 (37).jpg",
+  "/images/lxy/photograph/2 (9).jpg",
+  "/images/lxy/photograph/3 (6).jpg",
+  "/images/lxy/photograph/有迹可循.jpg"
 ];
 
 var currentIndex = 0;
-
-// Group photos by year
-var photosByYear = {};
-for (var i = 0; i < photos.length; i++) {
-  var photo = photos[i];
-  if (!photosByYear[photo.year]) {
-    photosByYear[photo.year] = [];
-  }
-  photosByYear[photo.year].push(photo);
-}
-
-// Render photos
-function renderPhotos() {
-  var grid = document.getElementById('photo-grid');
-  var years = Object.keys(photosByYear).sort(function(a, b) { return b - a; });
-
-  for (var j = 0; j < years.length; j++) {
-    var year = years[j];
-    var yearSection = document.createElement('div');
-    yearSection.className = 'photograph-year';
-    yearSection.innerHTML = '<h2>' + year + '</h2>';
-
-    var photoGrid = document.createElement('div');
-    photoGrid.className = 'photograph-grid';
-
-    var yearPhotos = photosByYear[year];
-    for (var k = 0; k < yearPhotos.length; k++) {
-      var photo = yearPhotos[k];
-      var item = document.createElement('div');
-      item.className = 'photograph-item';
-      var globalIdx = photos.indexOf(photo);
-      item.innerHTML = '<img src="' + photo.src + '" alt="Photo" onclick="openLightbox(' + globalIdx + ')">';
-      photoGrid.appendChild(item);
-    }
-
-    yearSection.appendChild(photoGrid);
-    grid.appendChild(yearSection);
-  }
-}
 
 function openLightbox(index) {
   currentIndex = index;
   var lightbox = document.getElementById('lightbox');
   var img = document.getElementById('lightbox-img');
-  img.src = photos[index].src;
+  img.src = photos[index];
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -205,23 +202,18 @@ function closeLightbox() {
 
 function navigateLightbox(direction) {
   currentIndex = (currentIndex + direction + photos.length) % photos.length;
-  document.getElementById('lightbox-img').src = photos[currentIndex].src;
+  document.getElementById('lightbox-img').src = photos[currentIndex];
 }
 
-// Keyboard navigation
 document.addEventListener('keydown', function(e) {
   var lightbox = document.getElementById('lightbox');
   if (!lightbox.classList.contains('active')) return;
-
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') navigateLightbox(-1);
   if (e.key === 'ArrowRight') navigateLightbox(1);
 });
 
-// Close lightbox when clicking outside image
 document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target.id === 'lightbox') closeLightbox();
 });
-
-renderPhotos();
 </script>
