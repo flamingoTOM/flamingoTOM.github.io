@@ -54,7 +54,7 @@ B.E. in Measurement & Control Technology and Instrumentation · *Sept 2022 – J
 - Contributed to CPU/memory resource optimization across Nissan N6/N7/N8 platforms (QC8778, Orin-N, Orin-Y).
 - Built automation pipelines (first-vehicle closed-loop, auto-compile & deploy, road-test data analysis) and a Feishu bot using Claude Code.
 
-**[Zhejiang University Huzhou Research Institute](https://hz.zju.edu.cn/)** — Robot Navigation Algorithm Intern
+**[Huzhou Institute of Zhejiang University](http://hzi.zju.edu.cn/site/main/)** — Robot Navigation Algorithm Intern
 *Jun 2025 – Aug 2025 · Huzhou*
 - Researched autonomous navigation and control for small carrier vehicles in GNSS-denied environments.
 - Designed an Ackermann-chassis local planner based on the RRP pure-pursuit algorithm, resolving curvature-jump deviation issues.
