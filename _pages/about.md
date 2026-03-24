@@ -43,25 +43,26 @@ redirect_from:
 .edu-list, .exp-list {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 30px;
 }
 
 .edu-item, .exp-item {
   display: grid;
-  grid-template-columns: 140px 240px 1fr;
-  align-items: center;
-  column-gap: 28px;
+  grid-template-columns: 80px 160px 1fr;
+  align-items: start;
+  column-gap: 15px;
 }
 
 .exp-item {
-  grid-template-columns: 140px 200px 1fr;
+  grid-template-columns: 100px 150px 1fr;
 }
 
 .edu-time, .exp-time {
   color: #8a8f98;
-  font-size: 16px;
-  line-height: 1.4;
-  white-space: pre-line;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+  padding-top: 5px;
 }
 
 .edu-time span, .exp-time span {
@@ -71,23 +72,24 @@ redirect_from:
 .edu-logo, .exp-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 5px;
 }
 
 .edu-logo img, .exp-logo img {
-  max-width: 220px;
-  max-height: 80px;
+  max-width: 140px;
+  max-height: 55px;
   object-fit: contain;
 }
 
 .exp-logo img {
-  max-width: 180px;
-  max-height: 70px;
+  max-width: 120px;
+  max-height: 50px;
 }
 
 .edu-content h3, .exp-content h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0 0 6px;
+  font-size: 18px;
   font-weight: 700;
   color: #1f57ff;
   font-family: "Georgia", serif;
@@ -97,12 +99,27 @@ redirect_from:
   color: #333;
 }
 
-.edu-subtitle, .exp-subtitle {
+/* 三行学校信息样式 */
+.edu-college {
+  margin: 0 0 5px 0;
+  font-size: 13px;
+  color: #777;
+  font-family: "Georgia", serif;
+}
+
+.edu-major {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
-  line-height: 1.6;
   font-style: italic;
+  font-family: "Georgia", serif;
+}
+
+.exp-subtitle {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
   font-family: "Georgia", serif;
 }
 
@@ -213,30 +230,32 @@ redirect_from:
     <div class="edu-list">
       <div class="edu-item">
         <div class="edu-time">
-          <span>2026</span>
-          <span>–</span>
-          <span>2029</span>
+          <span>2026.9</span>
+          <span>—</span>
+          <span>2029.6</span>
         </div>
         <div class="edu-logo">
           <img src="/images/lxy/school/buaa.png" alt="Beihang University">
         </div>
         <div class="edu-content">
-          <h3>Beihang University (北京航空航天大学)</h3>
-          <p class="edu-subtitle">M.S. in Electronic Information · Direct admission</p>
+          <h3>Beihang University (BUAA)</h3>
+          <p class="edu-college">School of Automation Science and Electrical Engineering</p>
+          <p class="edu-major">M.S. in Electronic Information · Direct admission</p>
         </div>
       </div>
       <div class="edu-item">
         <div class="edu-time">
-          <span>2022</span>
-          <span>–</span>
-          <span>2026</span>
+          <span>2022.9</span>
+          <span>—</span>
+          <span>2026.6</span>
         </div>
         <div class="edu-logo">
           <img src="/images/lxy/school/wut.png" alt="Wuhan University of Technology">
         </div>
         <div class="edu-content">
-          <h3>Wuhan University of Technology (武汉理工大学)</h3>
-          <p class="edu-subtitle">B.E. in Measurement & Control Technology and Instrumentation</p>
+          <h3>Wuhan University of Technology</h3>
+          <p class="edu-college">School of Mechanical and Electronic Engineering</p>
+          <p class="edu-major">B.E. in Measurement & Control Technology and Instrumentation</p>
         </div>
       </div>
     </div>
@@ -356,30 +375,32 @@ redirect_from:
     <div class="edu-list">
       <div class="edu-item">
         <div class="edu-time">
-          <span>2026</span>
-          <span>–</span>
-          <span>2029</span>
+          <span>2026.9</span>
+          <span>—</span>
+          <span>2029.6</span>
         </div>
         <div class="edu-logo">
           <img src="/images/lxy/school/buaa.png" alt="北京航空航天大学">
         </div>
         <div class="edu-content">
           <h3>北京航空航天大学</h3>
-          <p class="edu-subtitle">电子信息硕士研究生 · 直接推免</p>
+          <p class="edu-college">自动化科学与电气工程学院</p>
+          <p class="edu-major">电子信息硕士研究生 · 直接推免</p>
         </div>
       </div>
       <div class="edu-item">
         <div class="edu-time">
-          <span>2022</span>
-          <span>–</span>
-          <span>2026</span>
+          <span>2022.9</span>
+          <span>—</span>
+          <span>2026.6</span>
         </div>
         <div class="edu-logo">
           <img src="/images/lxy/school/wut.png" alt="武汉理工大学">
         </div>
         <div class="edu-content">
           <h3>武汉理工大学</h3>
-          <p class="edu-subtitle">测控技术与仪器专业学士</p>
+          <p class="edu-college">机电工程学院</p>
+          <p class="edu-major">测控技术与仪器专业学士</p>
         </div>
       </div>
     </div>
