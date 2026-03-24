@@ -122,11 +122,21 @@ $(document).ready(function () {
         el.textContent = translations[lang][key];
       }
     });
-    // Toggle about page language content
-    document.querySelectorAll(".lang-content").forEach(el => {
-      el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
-    });
+    // Toggle about page language content by ID
+    var enDiv = document.getElementById('lang-en');
+    var zhDiv = document.getElementById('lang-zh');
+    if (enDiv && zhDiv) {
+      if (lang === 'zh') {
+        enDiv.style.display = 'none';
+        zhDiv.style.display = 'block';
+      } else {
+        enDiv.style.display = 'block';
+        zhDiv.style.display = 'none';
+      }
+    }
     document.documentElement.lang = lang;
+    // Dispatch event for about page listener
+    window.dispatchEvent(new CustomEvent('languageChange', { detail: { lang: lang } }));
   };
 
   var translations = {

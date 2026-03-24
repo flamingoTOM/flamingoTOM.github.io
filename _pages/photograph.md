@@ -10,6 +10,7 @@ author_profile: false
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  font-family: "Times New Roman", "Cambria Math", serif;
 }
 
 .photograph-intro {
@@ -27,6 +28,7 @@ author_profile: false
   border-bottom: 2px solid #ddd;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  font-family: "Times New Roman", "Cambria Math", serif;
 }
 
 .photograph-grid {
@@ -123,17 +125,17 @@ author_profile: false
 </div>
 
 <script>
-const photos = [
-  { src: "/images/lxy/photograph/有迹可循.jpg", year: 2021 },
+var photos = [
+  { src: "/images/lxy/photograph/1 (37).jpg", year: 2021 },
   { src: "/images/lxy/photograph/2 (9).jpg", year: 2021 },
   { src: "/images/lxy/photograph/3 (6).jpg", year: 2021 },
-  { src: "/images/lxy/photograph/1 (37).jpg", year: 2021 },
-  { src: "/images/lxy/photograph/3 (5).jpg", year: 2022 },
-  { src: "/images/lxy/photograph/InterPhoto_1651233974871.jpg", year: 2022 },
+  { src: "/images/lxy/photograph/有迹可循.jpg", year: 2021 },
   { src: "/images/lxy/photograph/2 (7).jpg", year: 2022 },
+  { src: "/images/lxy/photograph/InterPhoto_1651233974871.jpg", year: 2022 },
   { src: "/images/lxy/photograph/2 (1).jpg", year: 2022 },
   { src: "/images/lxy/photograph/1 (35).jpg", year: 2022 },
   { src: "/images/lxy/photograph/2 (16).jpg", year: 2022 },
+  { src: "/images/lxy/photograph/3 (5).jpg", year: 2022 },
   { src: "/images/lxy/photograph/1 (28).jpg", year: 2023 },
   { src: "/images/lxy/photograph/1 (13).jpg", year: 2023 },
   { src: "/images/lxy/photograph/1 (15).jpg", year: 2023 },
@@ -146,47 +148,51 @@ const photos = [
   { src: "/images/lxy/photograph/20231021-_DSC1304.jpg", year: 2023 }
 ];
 
-let currentIndex = 0;
+var currentIndex = 0;
 
 // Group photos by year
-const photosByYear = {};
-photos.forEach(photo => {
+var photosByYear = {};
+for (var i = 0; i < photos.length; i++) {
+  var photo = photos[i];
   if (!photosByYear[photo.year]) {
     photosByYear[photo.year] = [];
   }
   photosByYear[photo.year].push(photo);
-});
+}
 
 // Render photos
 function renderPhotos() {
-  const grid = document.getElementById('photo-grid');
-  const years = Object.keys(photosByYear).sort((a, b) => b - a);
+  var grid = document.getElementById('photo-grid');
+  var years = Object.keys(photosByYear).sort(function(a, b) { return b - a; });
 
-  years.forEach(year => {
-    const yearSection = document.createElement('div');
+  for (var j = 0; j < years.length; j++) {
+    var year = years[j];
+    var yearSection = document.createElement('div');
     yearSection.className = 'photograph-year';
-    yearSection.innerHTML = `<h2>${year}</h2>`;
+    yearSection.innerHTML = '<h2>' + year + '</h2>';
 
-    const photoGrid = document.createElement('div');
+    var photoGrid = document.createElement('div');
     photoGrid.className = 'photograph-grid';
 
-    photosByYear[year].forEach((photo, idx) => {
-      const item = document.createElement('div');
+    var yearPhotos = photosByYear[year];
+    for (var k = 0; k < yearPhotos.length; k++) {
+      var photo = yearPhotos[k];
+      var item = document.createElement('div');
       item.className = 'photograph-item';
-      const globalIdx = photos.indexOf(photo);
-      item.innerHTML = `<img src="${photo.src}" alt="Photo" onclick="openLightbox(${globalIdx})">`;
+      var globalIdx = photos.indexOf(photo);
+      item.innerHTML = '<img src="' + photo.src + '" alt="Photo" onclick="openLightbox(' + globalIdx + ')">';
       photoGrid.appendChild(item);
-    });
+    }
 
     yearSection.appendChild(photoGrid);
     grid.appendChild(yearSection);
-  });
+  }
 }
 
 function openLightbox(index) {
   currentIndex = index;
-  const lightbox = document.getElementById('lightbox');
-  const img = document.getElementById('lightbox-img');
+  var lightbox = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
   img.src = photos[index].src;
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -203,8 +209,8 @@ function navigateLightbox(direction) {
 }
 
 // Keyboard navigation
-document.addEventListener('keydown', (e) => {
-  const lightbox = document.getElementById('lightbox');
+document.addEventListener('keydown', function(e) {
+  var lightbox = document.getElementById('lightbox');
   if (!lightbox.classList.contains('active')) return;
 
   if (e.key === 'Escape') closeLightbox();
@@ -213,7 +219,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Close lightbox when clicking outside image
-document.getElementById('lightbox').addEventListener('click', (e) => {
+document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target.id === 'lightbox') closeLightbox();
 });
 

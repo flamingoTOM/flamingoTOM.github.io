@@ -7,7 +7,26 @@ redirect_from:
   - /about.html
 ---
 
-<div class="lang-content" data-lang="en">
+<style>
+#lang-en, #lang-zh {
+  font-family: "Times New Roman", "Cambria Math", serif;
+}
+
+#lang-zh {
+  font-family: "微软雅黑", "Microsoft YaHei", "黑体", "SimHei", "宋体", "SimSun", serif;
+}
+
+#lang-en h1, #lang-en h2, #lang-en h3,
+#lang-zh h1, #lang-zh h2, #lang-zh h3 {
+  font-family: "Times New Roman", "Cambria Math", serif;
+}
+
+#lang-zh h1, #lang-zh h2, #lang-zh h3 {
+  font-family: "微软雅黑", "Microsoft YaHei", "黑体", "SimHei", serif;
+}
+</style>
+
+<div id="lang-en" markdown="1">
 I am an incoming M.S. student in **Electronic Information** at [Beihang University (BUAA)](https://www.buaa.edu.cn/) (Sept 2026, direct admission). I received my B.E. in **Measurement & Control Technology and Instrumentation** from [Wuhan University of Technology (WHUT)](https://www.whut.edu.cn/) in 2026.
 
 My interests lie at the intersection of **autonomous robotics**, **embedded systems**, and **intelligent perception** — building things that move, sense, and decide in the real world.
@@ -19,11 +38,11 @@ I have interned at [Momenta](https://www.momenta.ai/) (autonomous driving, syste
 ## Education
 
 **Beihang University (北京航空航天大学)**
-M.S. in Electronic Information &nbsp;·&nbsp; *Sept 2026 – July 2029 (expected)*
+M.S. in Electronic Information · *Sept 2026 – July 2029 (expected)*
 Direct admission (推免)
 
 **Wuhan University of Technology (武汉理工大学)**
-B.E. in Measurement & Control Technology and Instrumentation &nbsp;·&nbsp; *Sept 2022 – July 2026*
+B.E. in Measurement & Control Technology and Instrumentation · *Sept 2022 – July 2026*
 
 ---
 
@@ -81,23 +100,23 @@ B.E. in Measurement & Control Technology and Instrumentation &nbsp;·&nbsp; *Sep
 *Feel free to reach out at [339300@whut.edu.cn](mailto:339300@whut.edu.cn)*
 </div>
 
-<div class="lang-content" data-lang="zh" style="display: none;">
+<div id="lang-zh" markdown="1" style="display: none;">
 我是**北京航空航天大学**（BUAA）电子信息专业2026年9月入学的硕士研究生（直接推免）。我于2026年从**武汉理工大学**获得**测控技术与仪器**专业学士学位。
 
 我的研究兴趣集中在**自主机器人**、**嵌入式系统**和**智能感知**的交叉领域——致力于研发能够在现实世界中移动、感知和决策的系统。
 
-我曾在**[ Momenta ](https://www.momenta.ai/)**（自动驾驶、系统集成）和**浙江大学湖州研究院**（GNSS拒止环境下的机器人导航）实习。我热衷于将研究想法转化为实际可用的硬件和软件。
+我曾在**[Momenta](https://www.momenta.ai/)**（自动驾驶、系统集成）和**浙江大学湖州研究院**（GNSS拒止环境下的机器人导航）实习。我热衷于将研究想法转化为实际可用的硬件和软件。
 
 ---
 
 ## 教育背景
 
 **北京航空航天大学**
-电子信息硕士研究生 &nbsp;·&nbsp; *2026年9月 – 2029年7月（预计）*
+电子信息硕士研究生 · *2026年9月 – 2029年7月（预计）*
 直接推免
 
 **武汉理工大学**
-测控技术与仪器专业学士 &nbsp;·&nbsp; *2022年9月 – 2026年7月*
+测控技术与仪器专业学士 · *2022年9月 – 2026年7月*
 
 ---
 
@@ -136,8 +155,8 @@ B.E. in Measurement & Control Technology and Instrumentation &nbsp;·&nbsp; *Sep
 
 ## 论文与专利
 
-1. **刘晓yu**，\"Design of Venlo-type Greenhouse Roof Cleaning Robot,\" *ICMIII 2025* (EI indexed). [2025年5月]
-2. 张金光、**刘晓yu** 等。 *一种屋顶清洁机器人。* 发明专利，申请号：202510500482.5。 [2025年4月]
+1. **刘晓煜**，\"Design of Venlo-type Greenhouse Roof Cleaning Robot,\" *ICMIII 2025* (EI indexed). [2025年5月]
+2. 张金光、**刘晓煜** 等。 *一种屋顶清洁机器人。* 发明专利，申请号：202510500482.5。 [2025年4月]
 
 ---
 
@@ -156,20 +175,27 @@ B.E. in Measurement & Control Technology and Instrumentation &nbsp;·&nbsp; *Sep
 </div>
 
 <script>
-// Wait for language system to be ready, then apply language
-document.addEventListener('DOMContentLoaded', function() {
-  // Small delay to ensure the language system is initialized
-  setTimeout(applyLanguageToContent, 100);
-});
+(function() {
+  var enDiv = document.getElementById('lang-en');
+  var zhDiv = document.getElementById('lang-zh');
 
-function applyLanguageToContent() {
-  const savedLang = localStorage.getItem("lang") || "en";
-  const contents = document.querySelectorAll('.lang-content');
-  contents.forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === savedLang ? 'block' : 'none';
+  function setLanguage(lang) {
+    if (lang === 'zh') {
+      enDiv.style.display = 'none';
+      zhDiv.style.display = 'block';
+    } else {
+      enDiv.style.display = 'block';
+      zhDiv.style.display = 'none';
+    }
+  }
+
+  // Initialize language
+  var savedLang = localStorage.getItem('lang') || 'en';
+  setLanguage(savedLang);
+
+  // Listen for language changes from main.js
+  window.addEventListener('languageChange', function(e) {
+    setLanguage(e.detail.lang);
   });
-}
-
-// Make this function available globally for language toggle
-window.applyLanguageToContent = applyLanguageToContent;
+})();
 </script>
