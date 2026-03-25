@@ -150,50 +150,6 @@
   <hr class="unseen-section-divider" />
 
   <!-- ======================================================
-       PUBLICATIONS
-  ====================================================== -->
-  <section id="publications">
-    <h2 class="section-title">Publications</h2>
-
-    <ul class="pub-list">
-
-      <!-- Venlo Roof Cleaning Robot -->
-      <li class="pub-item">
-        <div class="pub-thumb">
-          <img src="images/lxy/img_1.jpg" alt="Venlo Roof Cleaning Robot"
-               onerror="this.outerHTML='<div class=pub-thumb-placeholder>Venlo Robot</div>'" />
-        </div>
-        <div class="pub-body">
-          <div class="pub-title">Design of Venlo-type Greenhouse Roof Cleaning Robot</div>
-          <div class="pub-authors"><span class="self">X. Liu</span></div>
-          <div class="pub-venue"><span class="venue-name">ICMIII 2025</span> (EI indexed)</div>
-          <div class="pub-links">
-            <a class="pub-link" href="#">Paper</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Patent -->
-      <li class="pub-item">
-        <div class="pub-thumb">
-          <div class="pub-thumb-placeholder" style="display:flex;align-items:center;justify-content:center;width:160px;height:90px;background:var(--tag-bg);border-radius:5px;border:1px solid var(--border);font-size:.7rem;color:var(--text-light);padding:8px;text-align:center;">Invention Patent</div>
-        </div>
-        <div class="pub-body">
-          <div class="pub-title">一种屋顶清洗机器人</div>
-          <div class="pub-authors">张锦光, <span class="self">刘晓煜</span> 等</div>
-          <div class="pub-venue"><span class="venue-name">发明专利</span>，申请号：202510500482.5</div>
-          <div class="pub-links">
-            <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--text-muted);">Filed Apr. 2025</span>
-          </div>
-        </div>
-      </li>
-
-    </ul>
-  </section>
-
-  <hr class="unseen-section-divider" />
-
-  <!-- ======================================================
        PROJECTS
   ====================================================== -->
   <section id="opensource">
@@ -223,7 +179,8 @@
 
       <li class="oss-item">
         <div class="oss-thumb">
-          <div style="width:160px;height:90px;background:var(--tag-bg);border-radius:5px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-light);padding:8px;text-align:center;">AGV Stacking Vehicle</div>
+          <video src="assets/files/work/robocup.mp4" autoplay loop muted playsinline
+                 style="width:160px;height:90px;object-fit:cover;border-radius:5px;border:1px solid var(--border);"></video>
         </div>
         <div class="oss-body">
           <div class="proj-name">立体仓库式码垛智能车（AGV）</div>
@@ -238,7 +195,8 @@
 
       <li class="oss-item">
         <div class="oss-thumb">
-          <div style="width:160px;height:90px;background:var(--tag-bg);border-radius:5px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-light);padding:8px;text-align:center;">Drilling Robot</div>
+          <img src="assets/files/work/mechine.jpeg" alt="Drilling Robot"
+               onerror="this.outerHTML='<div style=width:160px;height:90px;background:var(--tag-bg);border-radius:5px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--text-light);padding:8px;text-align:center>Drilling Robot</div>'" />
         </div>
         <div class="oss-body">
           <div class="proj-name">软岩软土钻掘布管机器人</div>
@@ -261,11 +219,7 @@
           </div>
           <div class="proj-meta">浙江大学湖州研究院实习项目 · 2025.7 – 2025.8</div>
           <div class="proj-desc">
-            基于 ROS Noetic 的完整自主导航系统，面向 GNSS 信号缺失的工厂场景。<br/>
-            • <strong>建图</strong>：前后双 mid360 激光雷达 + IMU，采用 FAST-LIO-SAM 算法预先构建全局地图<br/>
-            • <strong>定位</strong>：激光雷达 + RTK天线 + 里程计融合，基于 HDL-Localization 与全局地图匹配，10 Hz 持续输出<br/>
-            • <strong>导航</strong>：move_base 框架；A* 全局规划；定制 RPP 纯跟踪局部规划器，遇动态障碍物减速/停车等待，始终保持全局路径跟踪；6 路前后声纳提供紧急制动保障<br/>
-            • 设计 nav_server 节点，支持 XML 格式离散航点发布与导航状态回调
+            基于RRP纯跟踪算法，设计了一款应用于阿克曼底盘的局部规划器，解决传统RPP算法在曲率突变路段的偏移问题
           </div>
         </div>
       </li>
